@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display&display=swap" rel="stylesheet">
+	<title>Measurement Unit Conversion</title>
+	<style type="text/css">
+		body{
+			background-color: #F6EEE9;
+			margin: 10%;
+			border-style: solid;
+			border-color: #F3ABB6;
+			padding: 5%;
+		}
+
+		h1{
+			text-align: center;
+			font-family: 'Pacifico', cursive;
+			background-color: #FFCAD4;
+		}
+
+		h2{
+			text-align: left;
+			font-family: 'Playfair Display', serif;
+		}
+
+		label{
+			font-family: 'Playfair Display', serif;
+			font-size: 150%;
+		}
+
+		form{
+			background-color: #EADBDD;
+		}
+
+	</style>
+</head>
+<body>
+<h1>Measurement Conversion Calculator</h1>
+<div class="container">
+	<script>
+		function LengthConverter(valNum){
+			centimeters = document.getElementById("Centimeter").
+			innerHTML = valNum + 0.1;
+			meters = document.getElementById("Meter").
+			innerHTML = valNum + 0.001;
+			kilometers = document.getElementById("Kilometer").
+			innerHTML = valNum + 0.000001;
+		}
+	</script>
+<form>
+		<h2>Select measurement (LENGTH)</h2>
+		<input type="length" name="length">
+		<button>enter</button>
+		<h2>Type in Millimeter Value (mm):</h2>
+		<input type="number" name="Millimeter" id="MM" onchange="LengthConverter(this.value)" oninput="LengthConverter(this.value)" onclick="LengthConverter(this.value)">
+		<button>enter</button>
+	<br>
+	<label><form>
+	<br>Centimeter (CM): <span id="Centimeter"></span></form></label>
+	<br>
+	<br>
+	<label>
+	<form>Meter (M): <span id="Meter"></span></form></label>
+	<br>
+	<br>
+	<label>
+	<form>Kilometer (KM): <span id="Kilometer"></span></form></label>
+	<br>
+</form>	
+</div>
+</body>
+</html>
